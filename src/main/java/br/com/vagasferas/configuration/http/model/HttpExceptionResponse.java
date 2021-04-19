@@ -41,6 +41,15 @@ public class HttpExceptionResponse {
         this.causa = causa;
     }
 
+    @Override
+    public String toString() {
+        return "HttpExceptionResponse {" +
+                "status=" + status +
+                ", mensagem='" + mensagem + '\'' +
+                ", causa=" + causa +
+                '}';
+    }
+
     public static HttpExceptionResponseBuilder builder(){
         return HttpExceptionResponseBuilder.builder();
     }
