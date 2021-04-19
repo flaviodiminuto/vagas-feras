@@ -15,6 +15,7 @@ import java.util.Optional;
 public class AlunoController implements ContratoRestFull<Aluno> {
 
     @POST
+    @Path("/")
     @Transactional
     public Response save(Aluno aluno){
         aluno.persist();
@@ -22,6 +23,7 @@ public class AlunoController implements ContratoRestFull<Aluno> {
     }
 
     @GET
+    @Path("/")
     public Response listAll(){
         return Response.ok(Aluno.listAll()).build();
     }
