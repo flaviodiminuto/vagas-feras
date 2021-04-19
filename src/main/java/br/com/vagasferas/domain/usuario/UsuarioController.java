@@ -13,6 +13,7 @@ public class UsuarioController implements ContratoRestFull<Usuario> {
 
     @Override
     @POST
+    @Path("/")
     @Transactional
     public Response save(Usuario usuario) {
         usuario.persist();
@@ -20,6 +21,7 @@ public class UsuarioController implements ContratoRestFull<Usuario> {
     }
 
     @Override
+    @Path("/")
     @GET
     public Response listAll() {
         return Response.ok(Usuario.listAll()).build();

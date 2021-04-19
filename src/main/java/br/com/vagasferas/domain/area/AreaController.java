@@ -14,6 +14,7 @@ import java.util.Optional;
 @Produces(MediaType.APPLICATION_JSON)
 public class AreaController implements ContratoRestFull<Area> {
     @POST
+    @Path("/")
     @Override
     @Transactional
     public Response save(Area area) {
@@ -22,6 +23,7 @@ public class AreaController implements ContratoRestFull<Area> {
     }
 
     @GET
+    @Path("/")
     @Override
     public Response listAll() {
         try{

@@ -14,6 +14,7 @@ import java.util.Optional;
 @Produces(MediaType.APPLICATION_JSON)
 public class NivelControler implements ContratoRestFull<Nivel> {
     @POST
+    @Path("/")
     @Override
     @Transactional
     public Response save(Nivel nivel) {
@@ -22,6 +23,7 @@ public class NivelControler implements ContratoRestFull<Nivel> {
     }
 
     @GET
+    @Path("/")
     @Override
     public Response listAll() {
         try{

@@ -14,6 +14,7 @@ import java.util.Optional;
 @Produces(MediaType.APPLICATION_JSON)
 public class SkillController implements ContratoRestFull<Skill> {
     @POST
+    @Path("/")
     @Override
     @Transactional
     public Response save(Skill skill) {
@@ -22,6 +23,7 @@ public class SkillController implements ContratoRestFull<Skill> {
     }
 
     @GET
+    @Path("/")
     @Override
     public Response listAll() {
         try{
